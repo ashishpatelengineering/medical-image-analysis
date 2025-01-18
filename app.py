@@ -23,7 +23,7 @@ uploaded_file = st.file_uploader("Choose an image file", type=["jpg", "jpeg", "p
 
 if uploaded_file:
     # Display the uploaded image
-    st.image(uploaded_file, caption="Uploaded Image", use_column_width=True)
+    st.image(uploaded_file, caption="Uploaded Image", use_container_width=True)
 
     # Step 4: Query Input
     st.subheader("Enter your Query")
