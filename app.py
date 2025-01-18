@@ -2,8 +2,9 @@ import streamlit as st
 import base64
 from groq import Groq
 
-# Step 1: Streamlit App Title
+# Step 1: Streamlit App Title and Description
 st.title("Medical Image Analysis")
+st.write("This app provides analysis of medical images to assist with understanding potential health conditions. However, the results generated should not be considered as medical advice. It is important to consult with a qualified healthcare professional for proper diagnosis and treatment.")
 
 # Step 2: API Key Input
 st.subheader("Enter GROQ API Key")
