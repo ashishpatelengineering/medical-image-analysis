@@ -27,7 +27,7 @@ if uploaded_file:
     st.image(uploaded_file, caption="Uploaded Image", use_container_width=True)
 
     # Step 4: Query Input
-    st.subheader("Enter your Query")
+    st.subheader("Enter your Query",anchor=False, divider="blue")
     query = st.text_input("What would you like to ask about the image?", placeholder="Type your query here...")
 
     # Step 5: Main Logic
