@@ -19,7 +19,7 @@ if not api_key:
     st.stop()
 
 # Step 3: Image Upload
-st.subheader("Upload an Image")
+st.subheader("Upload an Image", anchor=False, divider="rainbow")
 uploaded_file = st.file_uploader("Choose an image file", type=["jpg", "jpeg", "png"])
 
 if uploaded_file:
