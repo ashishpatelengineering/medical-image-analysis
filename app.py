@@ -8,7 +8,7 @@ import os
 load_dotenv()
 
 # Step 1: Streamlit App Title and Description
-st.title("Medical Image Analysis")
+st.header("AI-Assisted Medical Image Analysis", anchor=False, divider="blue")
 st.write("This app provides analysis of medical images to assist with understanding potential health conditions. However, the results generated should not be considered as medical advice. It is important to consult with a qualified healthcare professional for proper diagnosis and treatment.")
 
 # Step 2: API Key from Environment Variable
