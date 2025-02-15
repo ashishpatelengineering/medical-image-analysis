@@ -1,21 +1,21 @@
 import streamlit as st
 import base64
 from groq import Groq
+from dotenv import load_dotenv
+import os
+
+# Load environment variables
+load_dotenv()
 
 # Step 1: Streamlit App Title and Description
 st.title("Medical Image Analysis")
 st.write("This app provides analysis of medical images to assist with understanding potential health conditions. However, the results generated should not be considered as medical advice. It is important to consult with a qualified healthcare professional for proper diagnosis and treatment.")
 
-# Step 2: API Key Input
-st.subheader("Enter GROQ API Key")
-api_key = st.text_input(
-    "GROQ API Key", 
-    placeholder="Enter your GROQ API key here", 
-    type="password"
-)
+# Step 2: API Key from Environment Variable
+api_key = os.getenv("GROQ_API_KEY")
 
 if not api_key:
-    st.info("Please enter your GROQ API key to proceed.")
+    st.error("GROQ API Key not found. Please set it in your environment variables.")
     st.stop()
 
 # Step 3: Image Upload
